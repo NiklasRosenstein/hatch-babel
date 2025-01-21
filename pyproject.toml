@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hatch-babel"
+version = "0.1.0"
+description = "A hatch build-hook for compiling babel .po files to .mo files."
+readme = "README.md"
+authors = [
+    { name = "Niklas Rosenstein", email = "rosensteinniklas@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "babel>=2.16.0",
+    "hatchling>=1.27.0",
+    "typing-extensions>=4.12.2",
+]
+classifiers = [
+  "Framework :: Hatch",
+]
+
+[project.entry-points.hatch]
+babel = "hatch_babel"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.14.1",
+    "ruff>=0.9.2",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.mypy]
+strict = true
+
+[tool.slap.test]
+ruff = "uv run ruff format --check . && uv run ruff check ."
+mypy = "uv run mypy ."
+
+[tool.slap.run]
+fmt = "uv run ruff format ."
