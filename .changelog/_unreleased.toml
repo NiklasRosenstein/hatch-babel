@@ -1,0 +1,5 @@
+[[entries]]
+id = "00e4dbbb-2498-43af-9c5c-f39ad565a1be"
+type = "improvement"
+description = "Remove print for cleanup of files"
+author = "@NiklasRosenstein"

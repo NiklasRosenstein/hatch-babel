@@ -53,7 +53,6 @@ class PybabelBuldHook(BuildHookInterface[BuilderConfig]):
 
     def finalize(self, version: str, build_data: Any, artifact_path: str) -> None:
         for file in self.clean_files:
-            print("Cleanup", file)
             file.unlink()
 
 
