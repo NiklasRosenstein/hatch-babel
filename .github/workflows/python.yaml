@@ -3,6 +3,7 @@ name: Python Package Check
 on:
   push:
     branches: [ develop ]
+    tags: [ "*" ]
   pull_request:
     branches: [ develop ]
 
