@@ -10,8 +10,7 @@ requires = ["hatchling", "hatch-babel"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.hooks.babel]
-locale_dir = "pytr/locale"
-include_po = false
+locale_dir = "mypkg/locale"
 ```
 
 ## Configuration
