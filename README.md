@@ -4,7 +4,7 @@ A hatch build-hook to compile Babel `*.po` files to `*.mo` files at build time.
 
 ## Usage
 
-```yaml
+```toml
 [build-system]
 requires = ["hatchling", "hatch-babel"]
 build-backend = "hatchling.build"
