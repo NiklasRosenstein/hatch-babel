@@ -19,6 +19,7 @@ dependencies = [
 classifiers = [
   "Framework :: Hatch",
 ]
+license = { text = "MIT" }
 
 [project.entry-points.hatch]
 babel = "hatch_babel"
